@@ -1,0 +1,1 @@
+Created the SQL Script to create the tables with proper data types and constraints
