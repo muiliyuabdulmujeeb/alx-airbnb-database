@@ -8,6 +8,7 @@ JOIN users u ON b.user_id = u.user_id;
 SELECT p.property_id, p.name, p.description, p.location, p.price_per_night, r.rating, r.comment
 FROM properties p
 LEFT JOIN reviews r ON p.property_id = r.property_id
+ORDER BY r.rating DESC NULLS LAST;
 
 -- FULL OUTER JOIN query to retrieve all users and all bookings, even if the user has no booking or a booking is not linked to a user.
 SELECT u.first_name, u.last_name, p.name, p. description, p.location, p.price_per_night, b.start_date, b.end_date, b.total_price, b.status
